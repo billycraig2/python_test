@@ -1,5 +1,4 @@
-message = input("Input: ")
-
+message = input("Input: ").lower
 message_dict = {}
 
 # looping through each letter of the input 
