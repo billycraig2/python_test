@@ -1,3 +1,6 @@
+def tuples_to_dict(tuples):
+    return {key: value for key, value in tuples}
+
 '''
 EXERCISE 1 - BASIC OPERATIONS
 
@@ -40,3 +43,13 @@ student['courses']['chem'] = 'C'
 print(student)
 '''
 
+squares = {x: x*2 for x in range(1, 4)}  # Creates a dictionary of squares
+print(squares)
+
+names = ['william', 'chloe', 'samuel']
+name_length = {names: len(names) for names in names}
+print(name_length)
+
+tuples = [('william', 'cool'), ('chloe', 'cute'), ('eddy', 'twin')]
+
+print(tuples_to_dict(tuples))
