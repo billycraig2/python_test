@@ -9,5 +9,4 @@ def longest_word(message):
         
     
 message = input('Input: ')
-
 print(longest_word(message))
