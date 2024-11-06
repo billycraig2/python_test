@@ -1,20 +1,13 @@
-def find_longest_word(message):
-    longest_word = ''
-    current_word = ''
+from functools import reduce
 
-    # loop through each letter of the input message
-    for letter in message+' ':
-    # condition to check if alphabet letter
-        if letter.isalpha():
-            current_word = current_word + letter
-        else:
-            # condition to check if the current word is longer than longest word
-            if len(current_word) > len(longest_word):
-                longest_word = current_word
-            current_word = ''
-
-    print (longest_word)
+def longest_word(message):
+    # joins letters that are spaces or alphabet to a string and then splits by spaces
+    words = ''.join(filter(lambda c : c.isspace() or c.isalpha(), message)).split()
+    # loops through words and compares lengths
+    longest_word = reduce(lambda a, b: a if len(a) > len(b) else b, words)
+    return longest_word
         
     
 message = input('Input: ')
-find_longest_word(message)
+
+print(longest_word(message))
