@@ -1,6 +1,8 @@
 import re
 
+# uses regex to print if email is valid
 def check_email(email):
+    # checks string with regex
     if re.search(r'\b[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]{2,7}\b', email):
         print("Valid email")
     else:
