@@ -11,3 +11,6 @@ def check_email(email):
 
 email = input("Enter email: ")
 check_email(email)
+
+# number="255"
+# print(re.search(r""))
