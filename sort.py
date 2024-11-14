@@ -9,3 +9,6 @@ for i in range(len(input)):
             continue
 
 print(input)
+
+sorted_list = sorted(input)
+print(sorted_list)
